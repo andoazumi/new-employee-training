@@ -3,6 +3,7 @@
 html {
   width: 100%;
   height: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -13,4 +14,144 @@ body {
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #330808;
 }
+
+
+p {
+  font-size: 3.6rem;
+  line-height: 5.2rem;
+}
+
+@media screen and (max-width:1028px) {
+  p {
+    font-size: 2.8rem;
+    line-height: 4rem;
+  }
+}
+
+@media screen and (max-width:767px) {
+  p {
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+  }
+}
+
+
+/* =========== ヘッダー ===========*/
+
+header {
+  background-color: #EA4B4B;
+  height: 120px;
+  text-align: center;
+  padding-top: 33px;
+}
+
+@media screen and (max-width:1023px) {
+  header {
+    height: 100px;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  header {
+    height: 85px;
+    padding-top: 25px;
+  }
+}
+
+/* ======== ヘッダー ここまで=======*/
+
+
+/* =========== コンテンツ ===========*/
+.wrapper {
+  display: flex;
+  flex-flow: row-reverse;
+  min-height: 100%;
+}
+
+@media screen and (max-width:767px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
+main {
+  background-color: #FCE5CB;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+main p {
+  padding-bottom: 2px;
+}
+
+@media screen and (max-width:1023px) {
+  main p {
+    padding-bottom: 0;
+  }
+}
+
+/* ======== コンテンツ ここまで=======*/
+
+
+/* =========== サイド ===========*/
+
+.side {
+  background-color: #F0EB6A;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side p {
+  padding-bottom: 2px;
+}
+
+@media screen and (max-width:1023px) {
+  .side {
+    width: 240px;
+  }
+
+  .side p {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .side {
+    width: 100%;
+    height: 120px;
+  }
+}
+
+/* ======== さいど ここまで=======*/
+
+
+/* =========== フッター ===========*/
+footer {
+  background-color: #EAB34B;
+  height: 120px;
+  padding-top: 33px;
+  text-align: center;
+}
+
+@media screen and (max-width:1023px) {
+  footer {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  footer {
+    height: 60px;
+    padding-top: 12px;
+  }
+}
+
+/* ======== フッター ここまで=======*/
