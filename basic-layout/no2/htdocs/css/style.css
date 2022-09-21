@@ -1,8 +1,20 @@
 @charset "UTF-8";
 
+:root {
+  --c-txt: #330808;
+  --c-header: #EA4B4B;
+  --c-contents: #FCE5CB;
+  --c-sidebar: #F0EB6A;
+  --c-footer: #EAB34B;
+  --fz-sp: 2.4rem;
+  --fz-tab: 2.8rem;
+  --fz-pc: 3.6rem;
+}
+
 html {
   width: 100%;
   height: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -14,3 +26,170 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.txt {
+  color: var(--c-txt);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+
+.header {
+  background-color: var(--c-header);
+}
+
+.main {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.l-up {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+
+.contents {
+  flex: 1 1 auto;
+  background-color: var(--c-contents);
+}
+
+.side {
+  background: var(--c-sidebar);
+}
+
+.footer {
+  background-color: var(--c-footer);
+}
+
+.header,
+.contents,
+.side,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==== sp ==== */
+@media screen and (max-width:767px) {
+  .txt {
+    font-size: var(--fz-sp);
+  }
+
+  .header {
+    height: 85px;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .side {
+    height: 120px;
+    flex-direction: column;
+  }
+
+  .footer {
+    height: 60px;
+  }
+}
+
+/* = sp ここまで= */
+
+
+/* ==== tab ==== */
+@media screen and (min-width:768px) {
+  .txt {
+    font-size: var(--fz-tab);
+  }
+
+  .header {
+    height: 100px;
+  }
+
+  .wrapper {
+    justify-content: space-between;
+  }
+
+  .main {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .contents {
+    order: 2;
+  }
+
+  .side_01 {
+    order: 1;
+    width: 240px;
+  }
+
+  .side_02 {
+    order: 3;
+    height: 200px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .l-up {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .footer {
+    height: 120px;
+  }
+}
+
+/* = tab ここまで= */
+
+
+/* ==== pc ==== */
+@media screen and (min-width:1024px) {
+  .txt {
+    font-size: var(--fz-pc);
+  }
+
+  .header {
+    height: 120px;
+  }
+
+  .main {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .contents {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .side {
+    width: 320px;
+  }
+
+  .side_02 {
+    height: auto;
+  }
+
+  .l-up {
+    width: auto;
+  }
+
+  .footer {
+    height: 120px;
+  }
+}
+
+/* = pc ここまで= */
