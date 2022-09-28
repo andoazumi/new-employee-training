@@ -40,16 +40,12 @@ body {
   width: 100%;
 }
 
-.new_line {
-  display: inline-block;
-}
-
 .header {
   background-color: var(--c-header);
 }
 
 .main {
-  flex: 1 1 auto;
+  flex: 1;
   background-color: var(--c-background);
 }
 
@@ -61,6 +57,10 @@ body {
   background-color: var(--c-contents-1);
 }
 
+.contents_2 .inner {
+  display: grid;
+}
+
 .c2-items {
   background-color: var(--c-contents-2);
 
@@ -68,6 +68,7 @@ body {
 
 .banner .inner img {
   width: 100%;
+  height: auto;
 }
 
 /* == 正方形作成 == */
@@ -152,7 +153,6 @@ body {
   }
 
   .contents_2 .inner {
-    display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 235px 235px;
     gap: 20px 15px;
@@ -161,7 +161,6 @@ body {
   .banner .inner {
     margin-bottom: 65px;
   }
-
 
   .banner .img_other {
     display: block;
@@ -193,7 +192,8 @@ body {
     height: calc(100vh - 100px);
   }
 
-  .main section .inner,
+  .main .contents_1 .inner,
+  .main .contents_2 .inner,
   .main .banner .inner {
     margin-left: 30px;
     margin-right: 30px;
@@ -215,7 +215,7 @@ body {
 
   .contents_1 .c1-items {
     height: 250px;
-    width: 100%;
+    width: 50%;
   }
 
   .contents_1 .c1-items:first-child {
@@ -231,9 +231,9 @@ body {
   }
 
   .contents_2 .inner {
-    display: grid;
     grid-template-rows: repeat(4, 235px);
     gap: 30px 0;
+    word-break: break-all;
   }
 
   .banner .inner {
@@ -270,7 +270,8 @@ body {
     height: calc(100vh - 120px);
   }
 
-  .main section .inner,
+  .main .contents_1 .inner,
+  .main .contents_2 .inner,
   .main .banner .inner {
     margin-left: 50px;
     margin-right: 50px;
@@ -285,7 +286,6 @@ body {
   }
 
   .contents_2 .inner {
-    display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: 400px;
     gap: 0 50px;
