@@ -126,6 +126,7 @@ body {
 
   .inner {
     flex: 1;
+    height: calc(100vh - var(--h-header-pc));
   }
 
   .main {
