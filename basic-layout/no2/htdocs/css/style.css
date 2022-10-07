@@ -12,6 +12,10 @@
   --h-header-sp: 85px;
   --h-header-tab: 100px;
   --h-header-pc: 120px;
+  --h-sidebar-sp: 120px;
+  --h-sidebar-tab: 200px;
+  --h-footer-sp: 60px;
+  --h-footer-tab: 120px;
 }
 
 html {
@@ -69,15 +73,15 @@ body {
   }
 
   .contents {
-    height: calc(100vh - var(--h-header-sp));
+    height: calc(100vh - (var(--h-header-sp) + var(--h-sidebar-sp) * 2 + var(--h-footer-sp)));
   }
 
   .sidebar {
-    height: 120px;
+    height: var(--h-sidebar-sp);
   }
 
   .footer {
-    height: 60px;
+    height: var(--h-footer-sp);
   }
 }
 
@@ -92,7 +96,7 @@ body {
 
   .inner {
     display: flex;
-    height: calc(100vh - var(--h-header-tab));
+    height: calc(100vh - (var(--h-header-tab) + var(--h-sidebar-tab) + var(--h-footer-tab)));
   }
 
   .contents {
@@ -106,11 +110,11 @@ body {
   }
 
   .main>.sidebar:nth-child(2) {
-    height: 200px;
+    height: var(--h-sidebar-tab);
   }
 
   .footer {
-    height: 120px;
+    height: var(--h-footer-tab);
   }
 
 }
@@ -126,7 +130,7 @@ body {
 
   .inner {
     flex: 1;
-    height: calc(100vh - var(--h-header-pc));
+    height: calc(100vh - (var(--h-header-pc) + var(--h-footer-tab)));
   }
 
   .main {
