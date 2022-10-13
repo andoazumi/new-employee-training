@@ -1,8 +1,29 @@
 @charset "UTF-8";
 
+:root {
+  --c-txt: #330808;
+  --c-red: #EA4B4B;
+  --c-beige: #FCE5CB;
+  --c-blue: #CBDEFC;
+  --c-green: #CBFCE0;
+  --c-yellow: #F0EB6A;
+  --c-orange: #EAB34B;
+  --c-gray: #F2F2F2;
+  --fz-sp: 2.4rem;
+  --fz-tab: 2.8rem;
+  --fz-pc: 3.6rem;
+  --height-header-sp: 85px;
+  --height-header-tab: 100px;
+  --height-header-pc: 120px;
+  --height-footer-sp: 60px;
+  --height-footer-tab: 120px;
+  --height-footer-pc: 120px;
+}
+
 html {
   width: 100%;
   height: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -13,4 +34,265 @@ body {
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.txt {
+  color: var(--c-txt);
+}
+
+.new-line {
+  display: inline-block;
+}
+
+.header {
+  background: var(--c-red);
+}
+
+.main-visual {
+  background: var(--c-beige);
+}
+
+.contents-01 {
+  background: var(--c-blue);
+}
+
+.contents-02 {
+  background: var(--c-green);
+}
+
+.banner .inner {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.main {
+  background: var(--c-gray);
+}
+
+.sidebar {
+  background: var(--c-yellow);
+}
+
+.footer {
+  background: var(--c-orange);
+}
+
+.header,
+.main-visual,
+.contents-01,
+.contents-02,
+.banner,
+.sidebar,
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:767px) {
+  .txt {
+    font-size: var(--fz-sp);
+  }
+
+  .header {
+    height: var(--height-header-sp);
+  }
+
+  .main-visual {
+    height: calc(100vh - var(--height-header-sp));
+  }
+
+  .contents-01-area {
+    margin-top: 45px;
+  }
+
+  .contents-01 {
+    width: 100%;
+    height: 250px;
+  }
+
+  .contents-01:nth-child(n+2) {
+    margin-top: 25px;
+  }
+
+  .contents-02-area {
+    margin-top: 40px;
+  }
+
+  .contents-02-area .inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 15px;
+    text-align: center;
+  }
+
+  .contents-02 {
+    width: calc(50% - (15px / 2));
+    height: 235px;
+  }
+
+  .banner {
+    margin-top: 60px;
+  }
+
+  .inner {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .main {
+    padding-bottom: 65px;
+  }
+
+  .sidebar {
+    height: 120px;
+  }
+
+  .footer {
+    height: var(--height-footer-sp);
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .txt {
+    font-size: var(--fz-tab);
+  }
+
+  .header {
+    height: var(--height-header-tab);
+  }
+
+  .main-visual {
+    height: calc(100vh - var(--height-header-tab));
+  }
+
+  .wrapper-top {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .contents-01-area {
+    margin-top: 50px;
+  }
+
+  .contents-01-area .inner {
+    display: flex;
+    gap: 0 30px;
+  }
+
+  .contents-01 {
+    width: 50%;
+    height: 250px;
+  }
+
+  .contents-02-area {
+    margin-top: 50px;
+  }
+
+  .contents-02 {
+    width: 100%;
+    height: 235px;
+  }
+
+  .contents-02:nth-child(n + 2) {
+    margin-top: 30px;
+  }
+
+  .banner {
+    margin-top: 75px;
+  }
+
+  .inner {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .main {
+    flex: 1;
+    padding-bottom: 75px;
+  }
+
+  .sidebar {
+    width: 240px;
+  }
+
+  .footer {
+    height: var(--height-footer-tab);
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .txt {
+    font-size: var(--fz-pc);
+  }
+
+  .header {
+    height: var(--height-header-pc);
+  }
+
+  .main-visual {
+    height: calc(100vh - var(--height-header-pc));
+  }
+
+  .wrapper-top {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .contents-01-area {
+    margin-top: 75px;
+  }
+
+  .contents-01-area .inner {
+    display: flex;
+    gap: 0 50px;
+  }
+
+  .contents-01 {
+    width: 50%;
+    height: 400px;
+  }
+
+  .contents-02-area {
+    margin-top: 75px;
+
+  }
+
+  .contents-02-area .inner {
+    display: flex;
+    gap: 0 50px;
+  }
+
+  .contents-02 {
+    text-align: center;
+    word-break: break-all;
+    width: 25%;
+    height: 400px;
+  }
+
+  .banner {
+    margin-top: 75px;
+  }
+
+  .inner {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .main {
+    flex: 1;
+    padding-bottom: 100px;
+  }
+
+  .sidebar {
+    width: 320px;
+  }
+
+  .footer {
+    height: var(--height-footer-pc);
+  }
 }
