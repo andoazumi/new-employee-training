@@ -12,6 +12,9 @@
   --fz-sp: 2.4rem;
   --fz-tab: 2.8rem;
   --fz-pc: 3.6rem;
+  --height-sp: 85px;
+  --height-tub: 100px;
+  --height-pc: 120px;
 }
 
 html {
@@ -51,12 +54,6 @@ body {
   background: var(--c-gray);
 }
 
-.top-wrapper {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 .contents-01 {
   background: var(--c-blue);
 }
@@ -90,12 +87,19 @@ body {
   }
 
   .header {
-    height: 85px;
+    height: var(--height-sp);
   }
 
   .main {
-    padding-top: 60px;
     padding-bottom: 75px;
+  }
+
+  .main-visual {
+    height: calc(100vh - var(--height-sp));
+  }
+
+  .contents-01-area {
+    margin-top: 60px;
   }
 
   .contents-01 {
@@ -159,12 +163,19 @@ body {
   }
 
   .header {
-    height: 100px;
+    height: var(--height-tub);
   }
 
   .main {
-    padding-top: 60px;
     padding-bottom: 90px;
+  }
+
+  .main-visual {
+    height: calc(100vh - var(--height-tub));
+  }
+
+  .contents-01-area {
+    margin-top: 60px;
   }
 
   .contents-01-area .inner {
@@ -227,12 +238,19 @@ body {
   }
 
   .header {
-    height: 120px;
+    height: var(--height-pc);
   }
 
   .main {
-    padding-top: 80px;
     padding-bottom: 120px;
+  }
+
+  .main-visual {
+    height: calc(100vh - var(--height-pc));
+  }
+
+  .contents-01-area {
+    margin-top: 80px;
   }
 
   .contents-01-area .inner {
@@ -259,7 +277,7 @@ body {
 
   .inner .contents-02 {
     height: 250px;
-    width: calc(25% - 28px / 4);
+    width: calc(25% - 28px * 3 / 4);
   }
 
   .contents-03-area {
