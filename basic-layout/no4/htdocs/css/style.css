@@ -12,9 +12,9 @@
   --fz-sp: 2.4rem;
   --fz-tab: 2.8rem;
   --fz-pc: 3.6rem;
-  --height-sp: 85px;
-  --height-tub: 100px;
-  --height-pc: 120px;
+  --h-header-sp: 85px;
+  --h-header-tub: 100px;
+  --h-header-pc: 120px;
 }
 
 html {
@@ -87,7 +87,7 @@ body {
   }
 
   .header {
-    height: var(--height-sp);
+    height: var(--h-header-sp);
   }
 
   .main {
@@ -95,7 +95,7 @@ body {
   }
 
   .main-visual {
-    height: calc(100vh - var(--height-sp));
+    height: calc(100vh - var(--h-header-sp));
   }
 
   .contents-01-area {
@@ -163,7 +163,7 @@ body {
   }
 
   .header {
-    height: var(--height-tub);
+    height: var(--h-header-tub);
   }
 
   .main {
@@ -171,7 +171,7 @@ body {
   }
 
   .main-visual {
-    height: calc(100vh - var(--height-tub));
+    height: calc(100vh - var(--h-header-tub));
   }
 
   .contents-01-area {
@@ -238,7 +238,7 @@ body {
   }
 
   .header {
-    height: var(--height-pc);
+    height: var(--h-header-pc);
   }
 
   .main {
@@ -246,7 +246,7 @@ body {
   }
 
   .main-visual {
-    height: calc(100vh - var(--height-pc));
+    height: calc(100vh - var(--h-header-pc));
   }
 
   .contents-01-area {
