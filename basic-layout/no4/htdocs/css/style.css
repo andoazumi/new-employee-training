@@ -1,8 +1,26 @@
 @charset "UTF-8";
 
+:root {
+  --c-font: #330808;
+  --c-red: #EA4B4B;
+  --c-beige: #FCE5CB;
+  --c-gray: #F2F2F2;
+  --c-blue: #CBDEFC;
+  --c-green: #CBFCE0;
+  --c-yellow: #F0EB6A;
+  --c-orange: #EAB34B;
+  --fz-sp: 2.4rem;
+  --fz-tab: 2.8rem;
+  --fz-pc: 3.6rem;
+  --h-header-sp: 85px;
+  --h-header-tub: 100px;
+  --h-header-pc: 120px;
+}
+
 html {
   width: 100%;
   height: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -13,4 +31,278 @@ body {
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.new-line {
+  display: inline-block;
+}
+
+.txt {
+  color: var(--c-font);
+}
+
+.header {
+  background: var(--c-red);
+}
+
+.main-visual {
+  background: var(--c-beige);
+  flex: 1;
+}
+
+.main {
+  background: var(--c-gray);
+}
+
+.contents-01 {
+  background: var(--c-blue);
+}
+
+.contents-02 {
+  background: var(--c-green);
+}
+
+.contents-03 {
+  background: var(--c-yellow);
+}
+
+.footer {
+  background: var(--c-orange);
+}
+
+.header,
+.main-visual,
+.contents-01,
+.contents-02,
+.contents-03,
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:767px) {
+  .txt {
+    font-size: var(--fz-sp);
+  }
+
+  .header {
+    height: var(--h-header-sp);
+  }
+
+  .main {
+    padding-bottom: 75px;
+  }
+
+  .main-visual {
+    height: calc(100vh - var(--h-header-sp));
+  }
+
+  .contents-01-area {
+    margin-top: 60px;
+  }
+
+  .contents-01 {
+    height: 250px;
+    width: 100%;
+  }
+
+  .contents-01:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  .contents-02-area {
+    margin-top: 65px;
+  }
+
+  .contents-02-area>.contents-02 {
+    height: 390px;
+  }
+
+  .inner {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .inner .contents-02 {
+    height: 235px;
+  }
+
+  .contents-02:first-child {
+    margin-top: 30px;
+  }
+
+  .contents-02:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .contents-03-area {
+    margin-top: 65px;
+  }
+
+  .contents-03-area .inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 10px;
+  }
+
+  .contents-03 {
+    width: calc(50% - 10px / 2);
+    height: 250px;
+    text-align: center;
+  }
+
+  .footer {
+    height: 60px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .txt {
+    font-size: var(--fz-tab);
+  }
+
+  .header {
+    height: var(--h-header-tub);
+  }
+
+  .main {
+    padding-bottom: 90px;
+  }
+
+  .main-visual {
+    height: calc(100vh - var(--h-header-tub));
+  }
+
+  .contents-01-area {
+    margin-top: 60px;
+  }
+
+  .contents-01-area .inner {
+    gap: 0 20px;
+  }
+
+  .contents-01 {
+    height: 250px;
+    width: 100%;
+  }
+
+  .contents-02-area {
+    margin-top: 75px;
+  }
+
+  .contents-02-area>.contents-02 {
+    height: 420px;
+  }
+
+  .contents-02-area .inner {
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .inner .contents-02 {
+    height: 250px;
+    width: calc(50% - 20px / 2);
+  }
+
+  .contents-03-area {
+    margin-top: 75px;
+  }
+
+  .contents-03-area .inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .contents-03 {
+    height: 250px;
+    width: calc(100% / 3 - 20px * 2 / 3);
+  }
+
+  .inner {
+    margin-right: 40px;
+    margin-left: 40px;
+    display: flex;
+  }
+
+  .footer {
+    height: 120px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .txt {
+    font-size: var(--fz-pc);
+  }
+
+  .header {
+    height: var(--h-header-pc);
+  }
+
+  .main {
+    padding-bottom: 120px;
+  }
+
+  .main-visual {
+    height: calc(100vh - var(--h-header-pc));
+  }
+
+  .contents-01-area {
+    margin-top: 80px;
+  }
+
+  .contents-01-area .inner {
+    gap: 0 28px;
+  }
+
+  .contents-01 {
+    height: 400px;
+    width: 100%;
+  }
+
+  .contents-02-area {
+    margin-top: 105px;
+  }
+
+  .contents-02-area>.contents-02 {
+    height: 640px;
+  }
+
+  .contents-02-area .inner {
+    margin-top: 40px;
+    gap: 0 28px;
+  }
+
+  .inner .contents-02 {
+    height: 250px;
+    width: calc(25% - 28px * 3 / 4);
+  }
+
+  .contents-03-area {
+    margin-top: 150px;
+  }
+
+  .contents-03-area .inner {
+    flex-wrap: wrap;
+    gap: 30px 28px;
+  }
+
+  .contents-03 {
+    height: 350px;
+    width: calc(25% - 28px * 3 / 4);
+  }
+
+  .inner {
+    max-width: 1280px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .footer {
+    height: 120px;
+  }
 }
