@@ -322,16 +322,16 @@ body {
   .outer,
   .contents-02-area,
   .banner {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 
   .containar,
   .contents-02-area .inner,
   .banner .inner {
-    margin-left: 40px;
-    margin-right: 40px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .footer {
